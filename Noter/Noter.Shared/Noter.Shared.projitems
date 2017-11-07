@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>ac35882b-b4d1-46ad-901d-aaa03711649a</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Noter.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)DataAccessLayer\DBAccess.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataAccessLayer\DBAttributes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataAccessLayer\DBTable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataAccessLayer\IEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Book.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Shelf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Library.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Line.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Page.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+  </ItemGroup>
+</Project>

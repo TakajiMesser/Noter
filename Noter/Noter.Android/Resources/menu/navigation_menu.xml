@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <group android:checkableBehavior="single">
+    <item android:id="@+id/nav_home"
+          android:title="Home" />
+    <item android:id="@+id/nav_trip"
+          android:title="Trip View" />
+    <item android:id="@+id/nav_list"
+          android:title="Region List View" />
+    <item android:id="@+id/nav_map"
+          android:title="Region Map View" />
+  </group>
+  <item android:title="Debug">
+    <menu>
+      <item android:id="@+id/nav_database"
+          android:title="Database" />
+      <item android:id="@+id/nav_settings"
+          android:title="Settings" />
+      <item android:id="@+id/nav_logout"
+          android:title="Log Out" />
+    </menu>
+  </item>
+</menu>

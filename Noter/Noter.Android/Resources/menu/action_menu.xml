@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+  <item android:id="@+id/action_overflow"
+		android:icon="@drawable/ic_menu_moreoverflow_holo_dark"
+		android:title="More..."
+		app:showAsAction="always" >
+
+    <menu>
+      <item android:id="@+id/action_settings"
+                android:icon="@drawable/ic_settings"
+                app:showAsAction="ifRoom"
+                android:title="Settings" />
+
+      <item android:id="@+id/action_feedback"
+          android:icon="@drawable/stat_notify_chat"
+          app:showAsAction="ifRoom"
+          android:title="Feedback" />
+
+      <item android:id="@+id/action_logout"
+          android:icon="@drawable/ic_undo_white_24dp"
+          app:showAsAction="ifRoom"
+          android:title="Log Out" />
+    </menu>
+
+  </item>/>
+</menu>

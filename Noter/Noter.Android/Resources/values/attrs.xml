@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DoubleImageView">
+        <attr name="android:drawableRight" />
+        <attr name="android:text" />
+        <attr name="android:textSize" />
+        <attr name="android:textColor" />
+        <attr name="android:spacing" />
+    </declare-styleable>
+  <declare-styleable name="NumberPickerPreference">
+    <attr name="minValue" format="integer"/>
+    <attr name="maxValue" format="integer"/>
+  </declare-styleable>
+</resources>

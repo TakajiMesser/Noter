@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=35:24:32:E6:20:58:90:2E:CF:8C:8A:F6:8A:C3:82:B7:EC:63:45:23%3Bcom.psa.paulburton13.animationtest
+
+    You can also add your credentials to an existing key, using this line:
+    EE:F8:A5:0E:B2:90:9B:54:12:ED:DD:76:D6:34:98:AF:BD:4A:F7:FF;stuff.burton.ttsmap
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+
+  <!--<string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAeasxpW4XeZpDw7Ry97XsvsuJjZ3oTD4M</string>-->
+
+</resources>

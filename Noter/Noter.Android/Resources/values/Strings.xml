@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="application_name">Noter</string>
+    <string name="hub_address">216.151.26.60</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="app_not_available">Sorry, there\'s no web browser available</string>
+    <string name="action_websearch">Web search</string>
+    <string name="strBottomLine">From android material design</string>
+</resources>
