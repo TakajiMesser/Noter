@@ -15,10 +15,11 @@ namespace Noter.Shared.Data
         [Identifier]
         public string Title { get; set; }
 
-        // Should also have book "settings" here
-
         [ForeignKey(typeof(Shelf))]
         public int ShelfID { get; set; }
+
+        [ForeignKey(typeof(Tag))]
+        public List<int> TagIDs { get; set; }
 
         [Ignore]
         public Shelf Shelf => DBTable.Get<Shelf>(ShelfID);

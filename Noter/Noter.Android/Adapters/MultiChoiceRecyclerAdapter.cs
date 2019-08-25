@@ -9,30 +9,6 @@ namespace Noter.Droid.Adapters
 {
     public abstract class MultiChoiceRecyclerAdapter<T> : RecyclerView.Adapter, AbsListView.IMultiChoiceModeListener
     {
-        public class ItemClickEventArgs : EventArgs
-        {
-            public int Position { get; set; }
-            public T Item { get; set; }
-
-            public ItemClickEventArgs(int position, T item)
-            {
-                Position = position;
-                Item = item;
-            }
-        }
-
-        public class ItemLongClickEventArgs : EventArgs
-        {
-            public int Position { get; set; }
-            public T Item { get; set; }
-
-            public ItemLongClickEventArgs(int position, T item)
-            {
-                Position = position;
-                Item = item;
-            }
-        }
-
         private List<int> _selectedPositions = new List<int>();
         private ActionMode _actionMode;
         private AbsListView.IMultiChoiceModeListener _listener;
@@ -115,6 +91,30 @@ namespace Noter.Droid.Adapters
         public bool OnPrepareActionMode(ActionMode mode, IMenu menu)
         {
             return _listener.OnPrepareActionMode(mode, menu);
+        }
+
+        public class ItemClickEventArgs : EventArgs
+        {
+            public int Position { get; set; }
+            public T Item { get; set; }
+
+            public ItemClickEventArgs(int position, T item)
+            {
+                Position = position;
+                Item = item;
+            }
+        }
+
+        public class ItemLongClickEventArgs : EventArgs
+        {
+            public int Position { get; set; }
+            public T Item { get; set; }
+
+            public ItemLongClickEventArgs(int position, T item)
+            {
+                Position = position;
+                Item = item;
+            }
         }
     }
 }

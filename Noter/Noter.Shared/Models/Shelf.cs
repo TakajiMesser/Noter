@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Noter.Shared.Models
 {
-    public class Bookshelf
+    public class Shelf
     {
         public List<Book> Books { get; } = new List<Book>();
 
-        public Bookshelf()
+        public Shelf()
         {
 
         }

@@ -6,12 +6,12 @@ using SQLite;
 
 namespace Noter.Shared.Data
 {
-    public enum LineStates
+    public enum ContentTypes
     {
-        None,
-        Checked,
-        QuestionMarked,
-        Crossed
+        Text,
+        Numbered,
+        Checkbox,
+        Image
     }
 
     public class Line : IEntity
@@ -21,13 +21,22 @@ namespace Noter.Shared.Data
 
         [Identifier]
         public int LineNr { get; set; }
-        public string Text { get; set; }
-        public LineStates State { get; set; }
+        public ContentTypes ContentType { get; set; }
+        public string Content { get; set; }
 
         [ForeignKey(typeof(Page))]
         public int PageID { get; set; }
 
+        [ForeignKey(typeof(Line))]
+        public int ParentLineID { get; set; }
+
         [Ignore]
         public Page Page => DBTable.Get<Page>(PageID);
+
+        [Ignore]
+        public Line ParentLine => DBTable.Get<Line>(ParentLineID);
+
+        [Ignore]
+        public TableQuery<Line> ChildLines => DBTable.GetAll<Line>(l => l.ParentLineID == ID);
     }
 }

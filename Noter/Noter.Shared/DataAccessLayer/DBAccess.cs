@@ -7,7 +7,26 @@ namespace Noter.Shared.DataAccessLayer
 {
     public static class DBAccess
     {
-        public static readonly SQLiteConnection Connection = new SQLiteConnection(System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "noter.db"));
+        // Change with sqlite3_limit(db,SQLITE_LIMIT_VARIABLE_NUMBER,size)
+        public const int SQLITE_LIMIT_VARIABLE_NUMBER = 999;
+
+        public static string DatabasePath => Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "noter.db");
+
+        private static SQLiteConnection _connection = null;
+        public static SQLiteConnection Connection
+        {
+            get
+            {
+                if (_connection == null)
+                {
+                    _connection = new SQLiteConnection(DatabasePath);
+                }
+
+                return _connection;
+            }
+        }
+
+        public static int LastInsertRowID => (int)SQLite3.LastInsertRowid(Connection.Handle);
 
         public static IEnumerable<Type> GetEntityTypes()
         {

@@ -7,20 +7,11 @@ namespace Noter.Droid.Helpers
 {
     public static class PreferencesHelper
     {
-        public static ISharedPreferences Preferences
-        {
-            get
-            {
-                return PreferenceManager.GetDefaultSharedPreferences(Application.Context);
-            }
-        }
+        public static ISharedPreferences Preferences => PreferenceManager.GetDefaultSharedPreferences(Application.Context);
 
-        public static void ResetToDefaults()
-        {
-            Preferences.Edit()
-                .Clear()
-                .Commit();
-        }
+        public static void ResetToDefaults() => Preferences.Edit()
+            .Clear()
+            .Commit();
 
         public static int PredictionsThreshold
         {

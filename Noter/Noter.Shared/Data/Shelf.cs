@@ -19,6 +19,9 @@ namespace Noter.Shared.Data
         [ForeignKey(typeof(Library))]
         public int LibraryID { get; set; }
 
+        [ForeignKey(typeof(Tag))]
+        public List<int> TagIDs { get; set; }
+
         [Ignore]
         public Library Library => DBTable.Get<Library>(LibraryID);
 
